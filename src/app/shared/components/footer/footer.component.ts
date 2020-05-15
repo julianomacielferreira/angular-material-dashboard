@@ -21,27 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
-import { MainComponent } from './layouts/main/main.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-
-
-const routes: Routes = [
-	{
-		path: '',
-		component: MainComponent,
-		children: [
-		{
-			path: '',
-			component: DashboardComponent
-		}]
-	}
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+@Component({
+  selector: 'mlocks-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class AppRoutingModule { }
+export class FooterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

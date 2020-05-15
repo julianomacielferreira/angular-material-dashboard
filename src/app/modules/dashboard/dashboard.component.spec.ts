@@ -21,27 +21,28 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './layouts/main/main.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard.component';
 
+describe('DashboardComponent', () => {
+  let component: DashboardComponent;
+  let fixture: ComponentFixture<DashboardComponent>;
 
-const routes: Routes = [
-	{
-		path: '',
-		component: MainComponent,
-		children: [
-		{
-			path: '',
-			component: DashboardComponent
-		}]
-	}
-];
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ DashboardComponent ]
+    })
+    .compileComponents();
+  }));
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DashboardComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
