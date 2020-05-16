@@ -21,19 +21,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { MainComponent } from './main.component';
-
-
-@NgModule({
-  declarations: [
-  	MainComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
-})
-export class MainModule { }

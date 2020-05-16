@@ -29,11 +29,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppMaterialModule } from './app-material.module';
-import { MainModule } from './layouts/main/main.module';
-import { DashboardModule } from './modules/dashboard/dashboard.module';
-import { HeaderModule } from './shared/components/header/header.module';
-import { FooterModule } from './shared/components/footer/footer.module';
-import { SidebarModule } from './shared/components/sidebar/sidebar.module';
+import { ComponentsModule } from './components/components.module';
+import { PagesModule } from './pages/pages.module';
+
 
 @NgModule({
   declarations: [
@@ -44,11 +42,8 @@ import { SidebarModule } from './shared/components/sidebar/sidebar.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    MainModule,
-    DashboardModule,
-    HeaderModule,
-    FooterModule,
-    SidebarModule
+    ComponentsModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

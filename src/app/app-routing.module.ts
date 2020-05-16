@@ -24,8 +24,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainComponent } from './layouts/main/main.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { MainComponent } from './pages/main/main.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PostsComponent } from './pages/posts/posts.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,9 @@ const routes: Routes = [
 			path: '',
 			component: DashboardComponent
 		}]
+	}, {
+		path: 'posts',
+		component: PostsComponent
 	}
 ];
 

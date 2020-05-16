@@ -23,15 +23,19 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainComponent } from './main/main.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
-  	HeaderComponent
+  	DashboardComponent,
+  	MainComponent,
+  	PostsComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class HeaderModule { }
+export class PagesModule { }

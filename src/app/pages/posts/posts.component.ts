@@ -21,17 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer.component';
+import { Component, OnInit } from '@angular/core';
 
-
-@NgModule({
-  declarations: [
-  	FooterComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+@Component({
+  selector: 'mlocks-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.scss']
 })
-export class FooterModule { }
+export class PostsComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
