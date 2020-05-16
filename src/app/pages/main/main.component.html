@@ -1,8 +1,8 @@
 <!-- HEADER -->
-<mlocks-header></mlocks-header>
+<mlocks-header (toogleSidebarEvent)="sidebarToggle($event)"></mlocks-header>
 <!-- ./END -->
 <mat-drawer-container>
-  <mat-drawer mode="side" opened>
+  <mat-drawer  #drawer mode="side" [opened]="sidebarOpened">
     <!-- SIDEBAR -->
     <mlocks-sidebar></mlocks-sidebar>
     <!-- ./END -->

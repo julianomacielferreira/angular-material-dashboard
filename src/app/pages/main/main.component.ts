@@ -29,7 +29,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./main.component.scss"],
 })
 export class MainComponent implements OnInit {
+  public sidebarOpened: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  public sidebarToggle($event: any): void {
+    this.sidebarOpened = !this.sidebarOpened;
+  }
 }

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "mlocks-header",
@@ -29,7 +29,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
+  @Output() toogleSidebarEvent: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  public triggerToggleSidebar(): void {
+    this.toogleSidebarEvent.emit();
+  }
 }
