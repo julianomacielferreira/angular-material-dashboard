@@ -21,23 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { HeaderComponent } from "./header/header.component";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { FooterComponent } from "./footer/footer.component";
 
-const components = [
-    HeaderComponent,
-    SidebarComponent,
-    FooterComponent
-];
+const components = [HeaderComponent, SidebarComponent, FooterComponent];
 
 @NgModule({
   declarations: components,
-  imports: [
-    CommonModule
-  ],
-  exports: components
+  imports: [CommonModule],
+  exports: components,
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

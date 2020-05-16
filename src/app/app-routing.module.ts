@@ -21,31 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { MainComponent } from './pages/main/main.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { PostsComponent } from './pages/posts/posts.component';
-
+import { MainComponent } from "./pages/main/main.component";
+import { DashboardComponent } from "./pages/dashboard/dashboard.component";
+import { PostsComponent } from "./pages/posts/posts.component";
 
 const routes: Routes = [
-	{
-		path: '',
-		component: MainComponent,
-		children: [
-		{
-			path: '',
-			component: DashboardComponent
-		}, {
-			path: 'posts',
-			component: PostsComponent
-		}]
-	}
+  {
+    path: "",
+    component: MainComponent,
+    children: [
+      {
+        path: "",
+        component: DashboardComponent,
+      },
+      {
+        path: "posts",
+        component: PostsComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -21,17 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { NgModule } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSidenavModule } from "@angular/material/sidenav";
 
-const materialModules = [
-	MatButtonModule,
-  	MatSidenavModule
-];
+const materialModules = [MatButtonModule, MatSidenavModule];
 
 @NgModule({
   imports: materialModules,
-  exports: materialModules
+  exports: materialModules,
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {}
