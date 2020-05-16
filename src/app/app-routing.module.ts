@@ -37,10 +37,10 @@ const routes: Routes = [
 		{
 			path: '',
 			component: DashboardComponent
+		}, {
+			path: 'posts',
+			component: PostsComponent
 		}]
-	}, {
-		path: 'posts',
-		component: PostsComponent
 	}
 ];
 

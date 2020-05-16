@@ -1,4 +1,22 @@
+<!-- HEADER -->
 <mlocks-header></mlocks-header>
-<mlocks-sidebar></mlocks-sidebar>
-<router-outlet></router-outlet>
+<!-- ./END -->
+
+<mat-drawer-container>
+	
+	<mat-drawer mode="side" opened>
+		<!-- SIDEBAR -->
+		<mlocks-sidebar></mlocks-sidebar>
+		<!-- ./END -->		
+	</mat-drawer>
+
+	<mat-drawer-content>
+		<!-- MAIN CONTENT -->
+		<router-outlet></router-outlet>
+		<!-- ./END -->
+	</mat-drawer-content>
+</mat-drawer-container>
+
+<!-- FOOTER -->
 <mlocks-footer></mlocks-footer>
+<!-- ./END -->

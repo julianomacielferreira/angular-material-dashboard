@@ -25,6 +25,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
+import { AppMaterialModule } from '../app-material.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
@@ -41,6 +42,7 @@ const pages = [
   imports: [
     CommonModule,
     RouterModule,
+    AppMaterialModule,
     ComponentsModule
   ],
   exports: pages
