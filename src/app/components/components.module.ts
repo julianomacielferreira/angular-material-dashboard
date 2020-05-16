@@ -32,10 +32,7 @@ const components = [HeaderComponent, SidebarComponent, FooterComponent];
 
 @NgModule({
   declarations: components,
-  imports: [
-  	CommonModule, 
-  	AppMaterialModule
-  ],
+  imports: [CommonModule, AppMaterialModule],
   exports: components,
 })
 export class ComponentsModule {}

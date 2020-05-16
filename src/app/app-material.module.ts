@@ -24,12 +24,20 @@
 import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatDividerModule } from '@angular/material/divider';
+import { MatDividerModule } from "@angular/material/divider";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatMenuModule } from '@angular/material/menu';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 const materialModules = [
-	MatButtonModule, 
-	MatSidenavModule, 
-	MatDividerModule
+  MatButtonModule,
+  MatSidenavModule,
+  MatDividerModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatMenuModule,
+  FlexLayoutModule,
 ];
 
 @NgModule({
