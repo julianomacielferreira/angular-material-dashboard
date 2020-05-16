@@ -23,19 +23,26 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ComponentsModule } from '../components/components.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
 import { PostsComponent } from './posts/posts.component';
 
-@NgModule({
-  declarations: [
+const pages = [
   	DashboardComponent,
   	MainComponent,
   	PostsComponent
-  ],
+];
+
+@NgModule({
+  declarations: pages,
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule,
+    ComponentsModule
+  ],
+  exports: pages
 })
 export class PagesModule { }

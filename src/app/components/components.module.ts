@@ -27,15 +27,17 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 
+const components = [
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent
+];
 
 @NgModule({
-  declarations: [
-  	HeaderComponent,
-  	SidebarComponent,
-  	FooterComponent
-  ],
+  declarations: components,
   imports: [
     CommonModule
-  ]
+  ],
+  exports: components
 })
 export class ComponentsModule { }
