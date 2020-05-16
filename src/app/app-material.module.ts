@@ -24,8 +24,13 @@
 import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatDividerModule } from '@angular/material/divider';
 
-const materialModules = [MatButtonModule, MatSidenavModule];
+const materialModules = [
+	MatButtonModule, 
+	MatSidenavModule, 
+	MatDividerModule
+];
 
 @NgModule({
   imports: materialModules,
