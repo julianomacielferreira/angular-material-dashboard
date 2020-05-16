@@ -21,3 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+ :host {
+ 	display: flex;
+ 	flex-direction: column;
+ 	height: 100%;
+ }
+
+ mat-drawer {
+ 	width: 350px;
+ }
+
+ mat-drawer-container {
+ 	height: 100%;
+ }
