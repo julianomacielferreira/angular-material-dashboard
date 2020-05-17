@@ -21,3 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+h4 {
+  margin-top: 0;
+}
+
+.total {
+  font-size: 3em;
+}
+
+.mat-icon,
+.description {
+  color: green;
+}
+
+.mat-icon {
+  position: relative;
+  padding: 0 20px;
+  top: 5px;
+}

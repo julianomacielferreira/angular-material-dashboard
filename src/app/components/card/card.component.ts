@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import * as Highcharts from "highcharts";
 import HC_exporting from "highcharts/modules/exporting";
 HC_exporting(Highcharts);
@@ -36,12 +36,38 @@ export class CardComponent implements OnInit {
   public chartOptions: any = {
     chart: {
       type: "area",
+      backgroundColor: null,
+      borderWidth: 0,
+      margin: [2, 2, 2, 2],
+      height: 60,
     },
     title: {
       text: null,
     },
     subtitle: {
       text: null,
+    },
+    xAxis: {
+      labels: {
+        enabled: false,
+      },
+      title: {
+        enabled: false,
+      },
+      startOnTick: false,
+      endOnTick: false,
+      tickOptions: [],
+    },
+    yAxis: {
+      labels: {
+        enabled: false,
+      },
+      title: {
+        enabled: false,
+      },
+      startOnTick: false,
+      endOnTick: false,
+      tickOptions: [],
     },
     tooltip: {
       split: true,
@@ -58,10 +84,14 @@ export class CardComponent implements OnInit {
     },
     series: [
       {
-        data: [20, 30, 40, 50, 60, 80, 100],
+        data: [20, 30, 40, 50, 60],
       },
     ],
   }; // required
+
+  @Input() public label: string;
+  @Input() public total: number;
+  @Input() public percentage: number;
 
   constructor() {}
 
