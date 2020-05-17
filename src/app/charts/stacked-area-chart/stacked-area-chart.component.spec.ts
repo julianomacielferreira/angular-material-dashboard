@@ -21,28 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { AppMaterialModule } from "../app-material.module";
-import { ComponentsModule } from "../components/components.module";
-import { ChartsModule } from "../charts/charts.module";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { MainComponent } from "./main/main.component";
-import { PostsComponent } from "./posts/posts.component";
+import { StackedAreaChartComponent } from "./stacked-area-chart.component";
 
-const pages = [DashboardComponent, MainComponent, PostsComponent];
+describe("StackedAreaChartComponent", () => {
+  let component: StackedAreaChartComponent;
+  let fixture: ComponentFixture<StackedAreaChartComponent>;
 
-@NgModule({
-  declarations: pages,
-  imports: [
-    CommonModule,
-    RouterModule,
-    AppMaterialModule,
-    ComponentsModule,
-    ChartsModule,
-  ],
-  exports: pages,
-})
-export class PagesModule {}
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [StackedAreaChartComponent],
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(StackedAreaChartComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+});

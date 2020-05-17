@@ -23,26 +23,13 @@
  */
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { AppMaterialModule } from "../app-material.module";
-import { ComponentsModule } from "../components/components.module";
-import { ChartsModule } from "../charts/charts.module";
+import { StackedAreaChartComponent } from "./stacked-area-chart/stacked-area-chart.component";
 
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { MainComponent } from "./main/main.component";
-import { PostsComponent } from "./posts/posts.component";
-
-const pages = [DashboardComponent, MainComponent, PostsComponent];
+const components = [StackedAreaChartComponent];
 
 @NgModule({
-  declarations: pages,
-  imports: [
-    CommonModule,
-    RouterModule,
-    AppMaterialModule,
-    ComponentsModule,
-    ChartsModule,
-  ],
-  exports: pages,
+  declarations: components,
+  imports: [CommonModule],
+  exports: components,
 })
-export class PagesModule {}
+export class ChartsModule {}

@@ -21,28 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { AppMaterialModule } from "../app-material.module";
-import { ComponentsModule } from "../components/components.module";
-import { ChartsModule } from "../charts/charts.module";
+import { Component, OnInit } from "@angular/core";
 
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { MainComponent } from "./main/main.component";
-import { PostsComponent } from "./posts/posts.component";
-
-const pages = [DashboardComponent, MainComponent, PostsComponent];
-
-@NgModule({
-  declarations: pages,
-  imports: [
-    CommonModule,
-    RouterModule,
-    AppMaterialModule,
-    ComponentsModule,
-    ChartsModule,
-  ],
-  exports: pages,
+@Component({
+  selector: "mlocks-stacked-area-chart",
+  templateUrl: "./stacked-area-chart.component.html",
+  styleUrls: ["./stacked-area-chart.component.scss"],
 })
-export class PagesModule {}
+export class StackedAreaChartComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+}
