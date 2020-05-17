@@ -24,6 +24,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
+import { HighchartsChartModule } from "highcharts-angular";
 import { AppMaterialModule } from "../app-material.module";
 import { HeaderComponent } from "./header/header.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
@@ -39,7 +40,12 @@ const components = [
 
 @NgModule({
   declarations: components,
-  imports: [CommonModule, RouterModule, AppMaterialModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HighchartsChartModule,
+    AppMaterialModule,
+  ],
   exports: components,
 })
 export class ComponentsModule {}

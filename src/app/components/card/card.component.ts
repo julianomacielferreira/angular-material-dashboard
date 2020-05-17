@@ -22,6 +22,9 @@
  * THE SOFTWARE.
  */
 import { Component, OnInit } from "@angular/core";
+import * as Highcharts from "highcharts";
+import HC_exporting from "highcharts/modules/exporting";
+HC_exporting(Highcharts);
 
 @Component({
   selector: "mlocks-card",
@@ -29,7 +32,42 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./card.component.scss"],
 })
 export class CardComponent implements OnInit {
+  public Highcharts: typeof Highcharts = Highcharts; // required
+  public chartOptions: any = {
+    chart: {
+      type: "area",
+    },
+    title: {
+      text: null,
+    },
+    subtitle: {
+      text: null,
+    },
+    tooltip: {
+      split: true,
+      outside: true,
+    },
+    legend: {
+      enabled: false,
+    },
+    credits: {
+      enabled: false,
+    },
+    exporting: {
+      enabled: false,
+    },
+    series: [
+      {
+        data: [20, 30, 40, 50, 60, 80, 100],
+      },
+    ],
+  }; // required
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 300);
+  }
 }

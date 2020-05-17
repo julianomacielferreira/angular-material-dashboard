@@ -75,6 +75,9 @@ export class StackedAreaChartComponent implements OnInit {
         },
       },
     },
+    credits: {
+      enabled: false,
+    },
     exporting: {
       enabled: true,
     },
