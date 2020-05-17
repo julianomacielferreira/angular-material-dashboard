@@ -30,6 +30,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
+import { MatTableModule } from "@angular/material/table";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 const materialModules = [
@@ -41,6 +42,7 @@ const materialModules = [
   MatMenuModule,
   MatListModule,
   MatCardModule,
+  MatTableModule,
   FlexLayoutModule,
 ];
 

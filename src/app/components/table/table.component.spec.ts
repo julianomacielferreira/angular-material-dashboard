@@ -21,33 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { HighchartsChartModule } from "highcharts-angular";
-import { AppMaterialModule } from "../app-material.module";
-import { HeaderComponent } from "./header/header.component";
-import { SidebarComponent } from "./sidebar/sidebar.component";
-import { FooterComponent } from "./footer/footer.component";
-import { CardComponent } from "./card/card.component";
-import { TableComponent } from "./table/table.component";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-const components = [
-  HeaderComponent,
-  SidebarComponent,
-  FooterComponent,
-  CardComponent,
-  TableComponent,
-];
+import { TableComponent } from "./table.component";
 
-@NgModule({
-  declarations: components,
-  imports: [
-    CommonModule,
-    RouterModule,
-    HighchartsChartModule,
-    AppMaterialModule,
-  ],
-  exports: components,
-})
-export class ComponentsModule {}
+describe("TableComponent", () => {
+  let component: TableComponent;
+  let fixture: ComponentFixture<TableComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [TableComponent],
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+});
