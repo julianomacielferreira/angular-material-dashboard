@@ -21,17 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { HighchartsChartModule } from "highcharts-angular";
-import { StackedAreaChartComponent } from "./stacked-area-chart/stacked-area-chart.component";
-import { PieChartComponent } from "./pie-chart/pie-chart.component";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-const components = [StackedAreaChartComponent, PieChartComponent];
+import { PieChartComponent } from "./pie-chart.component";
 
-@NgModule({
-  declarations: components,
-  imports: [CommonModule, HighchartsChartModule],
-  exports: components,
-})
-export class ChartsModule {}
+describe("PieChartComponent", () => {
+  let component: PieChartComponent;
+  let fixture: ComponentFixture<PieChartComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [PieChartComponent],
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(PieChartComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+});

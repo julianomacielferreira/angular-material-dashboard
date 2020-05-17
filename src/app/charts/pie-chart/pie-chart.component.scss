@@ -21,17 +21,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { HighchartsChartModule } from "highcharts-angular";
-import { StackedAreaChartComponent } from "./stacked-area-chart/stacked-area-chart.component";
-import { PieChartComponent } from "./pie-chart/pie-chart.component";
-
-const components = [StackedAreaChartComponent, PieChartComponent];
-
-@NgModule({
-  declarations: components,
-  imports: [CommonModule, HighchartsChartModule],
-  exports: components,
-})
-export class ChartsModule {}
