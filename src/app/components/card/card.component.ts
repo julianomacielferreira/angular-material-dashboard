@@ -21,25 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { AppMaterialModule } from "../app-material.module";
-import { HeaderComponent } from "./header/header.component";
-import { SidebarComponent } from "./sidebar/sidebar.component";
-import { FooterComponent } from "./footer/footer.component";
-import { CardComponent } from "./card/card.component";
+import { Component, OnInit } from "@angular/core";
 
-const components = [
-  HeaderComponent,
-  SidebarComponent,
-  FooterComponent,
-  CardComponent,
-];
-
-@NgModule({
-  declarations: components,
-  imports: [CommonModule, RouterModule, AppMaterialModule],
-  exports: components,
+@Component({
+  selector: "mlocks-card",
+  templateUrl: "./card.component.html",
+  styleUrls: ["./card.component.scss"],
 })
-export class ComponentsModule {}
+export class CardComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+}

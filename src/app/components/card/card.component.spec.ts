@@ -21,25 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { AppMaterialModule } from "../app-material.module";
-import { HeaderComponent } from "./header/header.component";
-import { SidebarComponent } from "./sidebar/sidebar.component";
-import { FooterComponent } from "./footer/footer.component";
-import { CardComponent } from "./card/card.component";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-const components = [
-  HeaderComponent,
-  SidebarComponent,
-  FooterComponent,
-  CardComponent,
-];
+import { CardComponent } from "./card.component";
 
-@NgModule({
-  declarations: components,
-  imports: [CommonModule, RouterModule, AppMaterialModule],
-  exports: components,
-})
-export class ComponentsModule {}
+describe("CardComponent", () => {
+  let component: CardComponent;
+  let fixture: ComponentFixture<CardComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [CardComponent],
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CardComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+});
