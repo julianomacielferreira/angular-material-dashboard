@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 import { Component, OnInit } from "@angular/core";
+import { AppService } from "../../app.service";
 import * as Highcharts from "highcharts";
 import HC_exporting from "highcharts/modules/exporting";
 HC_exporting(Highcharts);
@@ -105,11 +106,9 @@ export class StackedAreaChartComponent implements OnInit {
     ],
   }; // required
 
-  constructor() {}
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-    }, 300);
+    this.appService.triggerResizeEvent();
   }
 }

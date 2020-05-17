@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 import { Component, OnInit, Input } from "@angular/core";
+import { AppService } from "../../app.service";
 import * as Highcharts from "highcharts";
 import HC_exporting from "highcharts/modules/exporting";
 HC_exporting(Highcharts);
@@ -93,11 +94,9 @@ export class CardComponent implements OnInit {
   @Input() public total: number;
   @Input() public percentage: number;
 
-  constructor() {}
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-    }, 300);
+    this.appService.triggerResizeEvent();
   }
 }

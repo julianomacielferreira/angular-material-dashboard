@@ -21,18 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit } from "@angular/core";
-import { AppService } from "../../app.service";
+import { Injectable } from "@angular/core";
 
-@Component({
-  selector: "mlocks-dashboard",
-  templateUrl: "./dashboard.component.html",
-  styleUrls: ["./dashboard.component.scss"],
+@Injectable({
+  providedIn: "root",
 })
-export class DashboardComponent implements OnInit {
-  constructor(private appService: AppService) {}
+export class AppService {
+  constructor() {}
 
-  ngOnInit(): void {
-    this.appService.triggerResizeEvent();
+  public triggerResizeEvent(): void {
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 300);
   }
 }
