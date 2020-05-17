@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { AppService } from "../../app.service";
 
 @Component({
   selector: "mlocks-header",
@@ -31,11 +32,12 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 export class HeaderComponent implements OnInit {
   @Output() toogleSidebarEvent: EventEmitter<any> = new EventEmitter();
 
-  constructor() {}
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {}
 
   public triggerToggleSidebar(): void {
     this.toogleSidebarEvent.emit();
+    this.appService.triggerResizeEvent();
   }
 }
