@@ -29,6 +29,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 const materialModules = [
@@ -39,6 +40,7 @@ const materialModules = [
   MatIconModule,
   MatMenuModule,
   MatListModule,
+  MatCardModule,
   FlexLayoutModule,
 ];
 
