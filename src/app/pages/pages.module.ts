@@ -30,9 +30,9 @@ import { ChartsModule } from "../charts/charts.module";
 
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MainComponent } from "./main/main.component";
-import { PostsComponent } from "./posts/posts.component";
+import { MapsComponent } from "./maps/maps.component";
 
-const pages = [DashboardComponent, MainComponent, PostsComponent];
+const pages = [DashboardComponent, MainComponent, MapsComponent];
 
 @NgModule({
   declarations: pages,

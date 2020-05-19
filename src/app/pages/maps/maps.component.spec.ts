@@ -21,15 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit } from "@angular/core";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-@Component({
-  selector: "mlocks-posts",
-  templateUrl: "./posts.component.html",
-  styleUrls: ["./posts.component.scss"],
-})
-export class PostsComponent implements OnInit {
-  constructor() {}
+import { MapsComponent } from "./maps.component";
 
-  ngOnInit(): void {}
-}
+describe("MapsComponent", () => {
+  let component: MapsComponent;
+  let fixture: ComponentFixture<MapsComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [MapsComponent],
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MapsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it("should create", () => {
+    expect(component).toBeTruthy();
+  });
+});
