@@ -42,7 +42,7 @@ export class StackedAreaChartComponent implements OnInit {
       text: "Random Data",
     },
     subtitle: {
-      text: "MLocks Dasboard",
+      text: "Dashboard",
     },
     xAxis: {
       categories: ["1750", "1800", "1850", "1900", "1950", "1999", "2050"],

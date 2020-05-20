@@ -26,7 +26,6 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { MainComponent } from "./pages/main/main.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
-import { MapsComponent } from "./pages/maps/maps.component";
 
 const routes: Routes = [
   {
@@ -36,10 +35,6 @@ const routes: Routes = [
       {
         path: "",
         component: DashboardComponent,
-      },
-      {
-        path: "maps",
-        component: MapsComponent,
       },
     ],
   },
