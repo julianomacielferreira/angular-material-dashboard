@@ -32,8 +32,8 @@ $ npm run start
 
 # Screenshots
 
-![](assets/screenshots/1.png)
-![](assets/screenshots/2.png)
+![](src/assets/screenshots/1.png)
+![](src/assets/screenshots/2.png)
 
 ## Development server
 
