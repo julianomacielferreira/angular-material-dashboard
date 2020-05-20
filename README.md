@@ -1,4 +1,4 @@
-# Mlocks Dashboard Angular
+# Angular Material Dashboard
 
 Based on Tutorial ["Angular 8 Admin Dashboard Panel from scratch using Angular Material, highcharts and flex-layout"](https://www.youtube.com/watch?v=FP7Hs8lTy1k).
 
